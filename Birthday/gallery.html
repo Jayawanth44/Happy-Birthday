@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+ * { margin:0; padding:0; box-sizing:border-box; }
+    
+    body {
+      font-family: 'Segoe UI', sans-serif;
+background-color: #bebebe;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      line-height: 1.5;
+      padding-top: 120px; /* extra space for header + nav */
+      margin: 0;
+      min-height: 100vh;
+      color: #264653;
+      background-color: var(--black);
+    }
+
+    /* Header styling */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 60px;
+      background: rgba(252, 61, 61, 0.7);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1100;
+      opacity: 1;
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #000000;
+      user-select: none;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+    }
+
+    nav {
+      margin-top: 0; /* moved nav directly below header */
+      text-align: center;
+      background: rgba(255,255,255,0.6);
+      backdrop-filter: blur(10px);
+      position: fixed;
+      top: 60px; /* below header */
+      left: 0;
+      right: 0;
+      padding: 15px 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      z-index: 1000;
+      opacity: 0.8;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #264653;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #cf2121;
+    }
+
+    section {
+      max-width: 1050px;
+      margin: 50px auto 100px; /* margin-bottom for footer space */
+      padding: 20px;
+      background: rgba(255,255,255,0.8);
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      color: #264653;
+    }
+
+    section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      color: #e76f51;
+      font-weight: 700;
+    }
+
+    section p {
+      font-size: 1rem;
+      margin-bottom: 15px;
+      color: #000000;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      font-size: 0.9rem;
+      color: #555;
+      background: linear-gradient(to right, #bebebe, #b2aaad);
+      box-shadow: 0 -3px 10px rgba(0,0,0,0.15);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      position: relative;
+      z-index: 2;
+      margin-top: 30px;
+    }
+
+    .main {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    /* Gallery */
+    .gallery {
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(200px,1fr));
+      gap:15px;
+    }
+    .gallery img {
+      width:100%;
+      height:150px;
+      object-fit:contain;
+      border-radius:8px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .gallery img:hover {
+      transform:scale(1.05);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+ 
+    </style>
+    <body>
+  <header>Gallery</header>
+    <nav>
+    <a href="Home.html" onclick="showPage('home')">Home</a>
+    <a href="About.html" onclick="showPage('about')">About</a>
+    <a href="gallery.html" onclick="showPage('gallery')">Gallery</a>
+  </nav>
+<section id="gallery">
+    <h2>Photo Gallery</h2>
+    <div class="gallery">
+      <img src="gallery1.jpg" alt="Aishwarya Gallery 1">
+      <img src="gallery10.jpg" alt="Aishwarya Gallery 2">
+      <img src="gallery420.jpg" alt="Aishwarya Gallery 3">
+      <img src="gallery11.jpg" alt="Aishwarya Gallery 4">
+      <img src="gallery2.jpg" alt="Aishwarya Gallery 5">
+      <img src="gallery6.jpg" alt="Aishwarya Gallery 6">
+      <img src="gallery16.jpg" alt="Aishwarya Gallery 7">
+      <img src="gallery15.jpg" alt="Aishwarya Gallery 8">
+      <img src="gallery3.jpg" alt="Aishwarya Gallery 9">
+      <img src="gallery7.jpg" alt="Aishwarya Gallery 10">
+      <img src="gallery4.jpg" alt="Aishwarya Gallery 11">
+      <img src="gallery12.jpg" alt="Aishwarya Gallery 12">
+      <img src="gallery14.jpg" alt="Aishwarya Gallery 13">
+      <img src="gallery13.jpg" alt="Aishwarya Gallery 14">
+      <img src="gallery9.jpg" alt="Aishwarya Gallery 15">
+      <img src="gallery8.jpg" alt="Aishwarya Gallery 16">
+    </div>
+  </section>
+ 
+  <div class="audio_container">
+   <audio id="bgMusic" loop>
+  <source src="Kurivippina (PenduJatt.Com.Se).mp3" type="audio/mp3">
+</audio>
+
+<script>
+  window.addEventListener('click', function () {
+    const audio = document.getElementById('bgMusic');
+    audio.play();
+  }, { once: true });
+</script>
+  </div>
+
+</body>
+</head></html>
