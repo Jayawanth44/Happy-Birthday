@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Aishwarya Bankapalli</title>
+  <style>
+ :root {
+  --card-height: 300px;
+  --card-width: calc(var(--card-height) / 1.5);
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  background: #191c29;
+}
+.card {
+  width: var(--card-width);
+  height: var(--card-height);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0 36px;
+  perspective: 2500px;
+  margin: 0 50px;
+}
+
+
+
+.cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wrapper {
+  transition: all 0.5s;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+.card:hover .wrapper {
+  transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+  box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+}
+
+.wrapper::before,
+.wrapper::after {
+  content: "";
+  opacity: 0;
+  width: 100%;
+  height: 80px;
+  transition: all 0.5s;
+  position: absolute;
+  left: 0;
+}
+.wrapper::before {
+  top: 0;
+  height: 100%;
+  background-image: linear-gradient(
+    to top,
+    transparent 46%,
+    rgba(12, 13, 19, 0.5) 68%,
+    rgba(12, 13, 19) 97%
+  );
+}
+.wrapper::after {
+  bottom: 0;
+  opacity: 1;
+  background-image: linear-gradient(
+    to bottom,
+    transparent 46%,
+    rgba(12, 13, 19, 0.5) 68%,
+    rgba(12, 13, 19) 97%
+  );
+}
+
+.card:hover .wrapper::before,
+.wrapper::after {
+  opacity: 1;
+}
+
+.card:hover .wrapper::after {
+  height: 120px;
+}
+.title {
+  width: 100%;
+  transition: transform 0.5s;
+}
+.card:hover .title {
+  transform: translate3d(0%, -50px, 100px);
+}
+
+.character {
+  width: 100%;
+  opacity: 0;
+  transition: all 0.5s;
+  position: absolute;
+  z-index: -1;
+}
+
+.card:hover .character {
+  opacity: 1;
+  transform: translate3d(0%, -30%, 100px);
+}
+  
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+
+* { margin:0; padding:0; box-sizing:border-box; }
+   body {
+  font-family: 'Segoe UI', sans-serif;
+  background-image: url("Photos/homebg.jpg"); /* Make sure the path is correct */
+  background-size: cover;              /* Ensures it covers the entire screen */
+  background-position: center;         /* Keeps the image centered */
+  background-repeat: no-repeat;        /* Prevents tiling */
+  background-attachment: fixed;        /* Keeps the background in place while scrolling */
+  line-height: 1.5;
+  padding-top: 80px;
+  margin: 0;                            /* Removes default margin */
+  min-height: 100vh;                   /* Ensures full viewport height */
+}
+
+    header {
+      position: fixed;
+      top:0; left:0; right:0;
+      background: rgba(255,255,255,0.8);
+      backdrop-filter: blur(10px);
+      text-align:center;
+      padding:20px;
+      z-index:1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      font-size:2.5rem;
+      color:#e76f51;
+      font-weight:700;
+    }
+    nav {
+      margin-top:10px;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration:none;
+      color:#264653;
+      font-weight:600;
+    }
+    nav a:hover { color:#2a9d8f; }
+
+    /* Slideshow */
+    .slideshow {
+      position: relative;
+      max-width:700px;
+      height:400px;
+      margin:100px auto 50px;
+      border-radius:15px;
+      overflow:hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      background:#fff;
+    }
+    .slides {
+      display:flex;
+      height:100%;
+      transition: transform 0.8s ease;
+    }
+    .slides img {
+      width:100%;
+      height:100%;
+      object-fit:contain;
+      flex-shrink: 0;
+    }
+    .controls {
+      position:absolute;
+      top:50%; width:100%;
+      display:flex; justify-content:space-between;
+      transform:translateY(-50%);
+    }
+    .controls button {
+      background:rgba(0,0,0,0.4);
+      border:none; color:#fff;
+      padding:10px; cursor:pointer;
+      border-radius:50%;
+    }
+    .controls button:hover { background:rgba(0,0,0,0.6); }
+
+    /* Sections */
+    section {
+      max-width:900px;
+      margin:50px auto;
+      padding: 20px;
+      background:rgba(255,255,255,0.8);
+      border-radius:12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    section h2 {
+      font-size:1.8rem;
+      margin-bottom:15px;
+      color:#e76f51;
+      text-align:center;
+    }
+    section p {
+      font-size:1rem;
+      margin-bottom:15px;
+      text-align:center;
+    }
+
+    /* Footer */
+    footer {
+      text-align:center;
+      padding:20px 0;
+      font-size:0.9rem;
+      color:#555;
+    }
+    .centered-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.aish-footer {
+  margin-top: 30px;
+  padding: 10px;
+  text-align: center;
+  font-size: 15px;
+  color: #fff;
+  background: linear-gradient(to right, #bebebe, #b2aaad);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.15);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  position: relative;
+  z-index: 2;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🎉 Happy Birthday Aishwarya Bankapalli 🎉</h1>
+    <nav>
+    <a href="Index.html" onclick="showPage('home')">Home</a>
+    <a href="About.html" onclick="showPage('about')">About</a>
+    <a href="gallery.html" onclick="showPage('gallery')">Gallery</a>
+  </nav>
+
+  </header>
+<div class="main-content">
+    <!-- Slideshow -->
+    <div id="slideshow" class="slideshow">
+      <div class="slides">
+        <img src="C:\Users\hp\Desktop\Photos\IMG-20250316-WA0016.jpg" alt="Aishwarya 1">
+        <img src="C:\Users\hp\Desktop\Photos\IMG-20250430-WA0009.jpg" alt="Aishwarya 2">
+        <img src="C:\Users\hp\Desktop\Photos\IMG-20250522-WA0016.jpg" alt="Aishwarya 3">
+      </div>
+      <div class="controls">
+        <button id="prev">&#10094;</button>
+        <button id="next">&#10095;</button>
+      </div>
+    </div>
+
+    <!-- 3D Cards -->
+    <div class="card-container">
+      <a href="C:\Users\hp\Desktop\Photos\IMG-20250430-WA0006.jpg" alt="Mythrill" target="_blank">
+        <div class="card">
+          <div class="wrapper">
+            <img src="C:\Users\hp\Desktop\Photos\IMG-20250430-WA0006.jpg" class="cover-image" />
+          </div>
+          <img src="C:\Users\hp\Downloads\realistic-ice-effects-words-ice-ice-text-effect_607646-1232-Photoroom.png" class="title" />
+          <img src="C:\Users\hp\Desktop\Photos\IMG-20250420-WA0004-Photoroom.png" class="character" />
+        </div>
+      </a>
+
+      <a href="C:\Users\hp\Desktop\Photos\IMG-20250423-WA0023.jpg" alt="Mythrill" target="_blank">
+        <div class="card">
+          <div class="wrapper">
+            <img src="C:\Users\hp\Desktop\Photos\IMG-20250423-WA0023.jpg" class="cover-image" />
+          </div>
+          <img src="C:\Users\hp\Downloads\realistic-ice-effects-words-ice-ice-text-effect_607646-1232-Photoroom.png" class="title" />
+          <img src="C:\Users\hp\Desktop\Photos\IMG-20250507-WA0001-Photoroom.png" class="character" />
+        </div>
+      </a>
+    </div>
+  </div>
+
+
+
+  <!-- Gallery Section -->
+  
+<footer class="aish-footer">
+  Made with ❤️ to celebrate Aishwarya.
+</footer>
+
+
+  <script>
+  const slideshow = document.querySelector('.slideshow');
+  const slides = document.querySelector('.slides');
+  const imgs = slides.querySelectorAll('img');
+  let idx = 0;
+
+  // Set correct width for slides container
+  slides.style.width = `${imgs.length * 100}%`;
+  imgs.forEach(img => img.style.width = `${100 / imgs.length}%`);
+
+  function showSlide(i) {
+    idx = (i + imgs.length) % imgs.length;
+    const slideWidth = slideshow.clientWidth;
+    slides.style.transform = `translateX(${-idx * slideWidth}px)`;
+  }
+
+  document.getElementById('prev').onclick = () => { showSlide(idx - 1); resetInterval(); };
+  document.getElementById('next').onclick = () => { showSlide(idx + 1); resetInterval(); };
+
+  let auto = setInterval(() => showSlide(idx + 1), 4000);
+
+  function resetInterval(){
+    clearInterval(auto);
+    auto = setInterval(() => showSlide(idx + 1), 4000);
+  }
+
+  window.addEventListener('resize', () => {
+    showSlide(idx);
+  });
+
+  // Initialize
+  showSlide(0);
+
+
+    /* 
+color palette: https://www.canva.com/colors/color-palettes/everything-nice/
+*/
+
+/* 
+styling scrollbars:
+https://www.digitalocean.com/community/tutorials/css-scrollbars
+*/
+  </script>
+</body>
+</html>
